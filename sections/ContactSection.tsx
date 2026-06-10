@@ -37,7 +37,7 @@ export const ContactSection = () => {
 
           const sitekey = isLocal
             ? '1x00000000000000000000AA'  // Local testing key
-            : (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAADeqyB8hG9bGgb15'); // Production live key
+            : (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAADiIZRYvpnNLtIG5'); // Production live key
 
           console.log('[Turnstile Debug] Initializing widget with Site Key:', sitekey);
 
