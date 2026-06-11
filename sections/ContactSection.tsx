@@ -340,7 +340,7 @@ export const ContactSection = () => {
 
               {/* Cloudflare Turnstile Widget */}
               <div className="flex justify-center my-2">
-                <div id="turnstile-container" className="cf-turnstile"></div>
+                <div id="turnstile-container"></div>
               </div>
 
               {/* Submit Button */}
