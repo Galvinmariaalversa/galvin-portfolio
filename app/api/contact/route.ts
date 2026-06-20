@@ -121,7 +121,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const isLocal = process.env.NODE_ENV === 'development' || ip === '::1' || ip === '127.0.0.1';
+    const host = req.headers.get('host') || '';
+    const hostname = host.split(':')[0];
+    const isLocal = hostname === 'localhost' ||
+      hostname === '127.0.0.1' ||
+      hostname === '[::1]' ||
+      /^192\.168\./.test(hostname) ||
+      /^10\./.test(hostname) ||
+      /^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(hostname) ||
+      /\.local$/.test(hostname);
     const secretKeyToUse = isLocal
       ? '1x0000000000000000000000000000000AA' // Correct sandbox testing secret key ending in AA
       : process.env.TURNSTILE_SECRET_KEY;
@@ -131,21 +139,27 @@ export async function POST(req: NextRequest) {
     if (!secretKeyToUse) {
       console.error('[Contact API] Missing TURNSTILE_SECRET_KEY in environment variables.');
     } else {
-      const turnstileVerifyRes = await fetch(
-        'https://challenges.cloudflare.com/turnstile/v0/siteverify',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            secret: secretKeyToUse,
-            response: turnstileToken,
-            remoteip: ip,
-          }),
-        }
-      );
-
-      const turnstileResult = await turnstileVerifyRes.json();
-      console.log('[Contact API] Cloudflare siteverify response:', turnstileResult);
+      let turnstileResult = { success: false, 'error-codes': ['internal-fallback'] };
+      try {
+        const turnstileVerifyRes = await fetch(
+          'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              secret: secretKeyToUse,
+              response: turnstileToken,
+              remoteip: ip,
+            }),
+          }
+        );
+        turnstileResult = await turnstileVerifyRes.json();
+        console.log('[Contact API] Cloudflare siteverify response:', turnstileResult);
+      } catch (fetchErr) {
+        console.error('[Contact API] Turnstile verify API request failed. Gracefully bypassing validation.', fetchErr);
+        // Bypassing verification so network failures to Cloudflare don't block inquiries
+        turnstileResult = { success: true, 'error-codes': [] };
+      }
 
       if (!turnstileResult.success) {
         console.warn(`[Contact API] Turnstile validation failed for IP ${ip}:`, turnstileResult['error-codes']);

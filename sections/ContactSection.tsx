@@ -32,8 +32,14 @@ export const ContactSection = () => {
       if (typeof window !== 'undefined' && (window as any).turnstile) {
         clearInterval(interval);
         try {
-          const isLocal = typeof window !== 'undefined' && 
-            (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+          const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+          const isLocal = hostname === 'localhost' ||
+            hostname === '127.0.0.1' ||
+            hostname === '[::1]' ||
+            /^192\.168\./.test(hostname) ||
+            /^10\./.test(hostname) ||
+            /^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(hostname) ||
+            /\.local$/.test(hostname);
 
           const sitekey = isLocal
             ? '1x00000000000000000000AA'  // Local testing key
