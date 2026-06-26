@@ -8,7 +8,10 @@ export const SkillsSection = () => {
   const frontendTechnologies = [
     'HTML5',
     'CSS3',
-    'JavaScript (ES6+)'
+    'JavaScript (ES6+)',
+    'React.js',
+    'Next.js',
+    'TypeScript',
   ];
 
   const stylingFrameworks = [
@@ -153,21 +156,21 @@ export const SkillsSection = () => {
               </span>
               <div>
                 <h3 className="text-lg font-bold font-heading text-white flex items-center gap-2">
-                  Currently Learning
+                  Currently Exploring
                   <span className="flex h-2.5 w-2.5 relative">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                   </span>
                 </h3>
                 <p className="text-gray-400 text-xs sm:text-sm mt-1 max-w-xl leading-relaxed">
-                  Studying modern component architecture, state management, and reusable UI structures to build robust web projects.
+                  Deepening expertise in advanced React patterns, performance optimization, and server-side rendering with Next.js App Router.
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 relative z-10 shrink-0">
               <span className="px-5 py-2.5 rounded-xl bg-purple-500/15 border border-purple-500/30 text-white text-sm sm:text-base font-bold shadow-[0_0_20px_rgba(139,92,246,0.15)] select-none">
-                React.js
+                Next.js App Router
               </span>
             </div>
 

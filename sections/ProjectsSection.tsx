@@ -10,6 +10,8 @@ interface ProjectItem extends Project {
   id: number;
   accentColor: string;
   reverse?: boolean;
+  width: number;
+  height: number;
 }
 
 export const ProjectsSection = () => {
@@ -24,18 +26,35 @@ export const ProjectsSection = () => {
   const projects: ProjectItem[] = [
     {
       id: 1,
-      title: 'IRCTC Train Ticket Booking Portal',
+      title: 'TaskFlow — Enterprise Project Management SaaS Dashboard',
       category: 'webapp',
       categoryName: 'Web Application',
-      description: 'A frontend mockup simulating the train ticket booking flow, focusing on clean user interface design and responsive layouts.',
-      tags: ['HTML5', 'Tailwind CSS', 'JavaScript'],
-      image: '/assets/irctc.png',
-      liveUrl: 'https://irctc-nextgen-simulation.vercel.app/',
-      githubUrl: 'https://github.com/Galvinmariaalversa/irctc-nextgen-simulation',
+      description: 'A highly interactive project management SaaS application built to handle complex client-side state. It features interactive Kanban boards, Gantt timelines, performance analytics charts, and custom workflow drawers, all responsive and optimized with a premium dark-mode aesthetic.',
+      tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'Recharts'],
+      image: '/assets/project management.png',
+      liveUrl: 'https://project-management-saas-lime.vercel.app/',
+      githubUrl: 'https://github.com/Galvinmariaalversa/project-management-saas-',
       accentColor: 'purple',
+      width: 2040,
+      height: 1278,
     },
     {
       id: 2,
+      title: 'BuildCraft Constructions — Premium Corporate Landing Page',
+      category: 'website',
+      categoryName: 'Landing Page',
+      description: 'A visually stunning, high-converting corporate website featuring scroll-driven animations, custom typography, luxury dark-mode aesthetics with gold accents, and a fully validated project estimator/contact form.',
+      tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'React Icons'],
+      image: '/assets/corporate business website.png',
+      liveUrl: 'https://buildcraft-landing-page-g6u4.vercel.app/',
+      githubUrl: 'https://github.com/Galvinmariaalversa/buildcraft-landing-page',
+      accentColor: 'amber',
+      reverse: true,
+      width: 2026,
+      height: 1278,
+    },
+    {
+      id: 3,
       title: 'IronPulse Fitness Platform',
       category: 'website',
       categoryName: 'Landing Page',
@@ -45,10 +64,11 @@ export const ProjectsSection = () => {
       liveUrl: 'https://iron-pulse-fitness-landing-page.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/IronPulse-Fitness-landing-page',
       accentColor: 'blue',
-      reverse: true,
+      width: 2039,
+      height: 1050,
     },
     {
-      id: 3,
+      id: 4,
       title: 'TastyTown Food Ordering Platform',
       category: 'webapp',
       categoryName: 'Web Application',
@@ -58,6 +78,9 @@ export const ProjectsSection = () => {
       liveUrl: 'https://tasty-town-food-ordering-q467.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/TastyTown-Food-Ordering',
       accentColor: 'pink',
+      reverse: true,
+      width: 2047,
+      height: 1051,
     },
   ];
 
@@ -69,18 +92,21 @@ export const ProjectsSection = () => {
     purple: 'hover:bg-purple-500 hover:text-white',
     blue: 'hover:bg-blue-500 hover:text-white',
     pink: 'hover:bg-pink-500 hover:text-white',
+    amber: 'hover:bg-amber-500 hover:text-white',
   };
 
   const glowColorMap: Record<string, string> = {
     purple: 'bg-purple-500/10',
     blue: 'bg-blue-500/10',
     pink: 'bg-pink-500/10',
+    amber: 'bg-amber-500/10',
   };
 
   const textColorMap: Record<string, string> = {
     purple: 'text-purple-400',
     blue: 'text-blue-400',
     pink: 'text-pink-400',
+    amber: 'text-amber-400',
   };
 
   return (
@@ -134,7 +160,7 @@ export const ProjectsSection = () => {
               >
                 {/* Preview Image */}
                 <div 
-                  className={`lg:col-span-6 group relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900 aspect-video shadow-xl ${
+                  className={`lg:col-span-6 group relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900 shadow-xl ${
                     project.reverse ? 'lg:order-2' : ''
                   }`}
                 >
@@ -142,9 +168,10 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={`${project.title} Mockup`}
-                    fill
+                    width={project.width}
+                    height={project.height}
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
@@ -180,8 +207,8 @@ export const ProjectsSection = () => {
                   <div className="flex gap-4">
                     <a
                       href={project.liveUrl}
-                      target={project.liveUrl !== '#' ? '_blank' : undefined}
-                      rel={project.liveUrl !== '#' ? 'noopener noreferrer' : undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`px-5 py-2.5 rounded-full text-xs font-semibold bg-white text-darkBg transition-all duration-300 inline-flex items-center gap-1.5 ${hoverBtnClass}`}
                     >
                       Live Demo <ExternalLink className="w-3.5 h-3.5" />

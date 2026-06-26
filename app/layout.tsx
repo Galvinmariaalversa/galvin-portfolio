@@ -59,10 +59,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} ${outfit.variable} scroll-smooth`}>
       <head>
-        <link rel="preconnect" href="https://irctc-nextgen-simulation.vercel.app" />
+        <link rel="preconnect" href="https://buildcraft-landing-page.vercel.app" />
         <link rel="preconnect" href="https://iron-pulse-fitness-landing-page.vercel.app" />
         <link rel="preconnect" href="https://tasty-town-food-ordering-q467.vercel.app" />
-        <link rel="dns-prefetch" href="https://irctc-nextgen-simulation.vercel.app" />
+        <link rel="dns-prefetch" href="https://buildcraft-landing-page.vercel.app" />
         <link rel="dns-prefetch" href="https://iron-pulse-fitness-landing-page.vercel.app" />
         <link rel="dns-prefetch" href="https://tasty-town-food-ordering-q467.vercel.app" />
       </head>

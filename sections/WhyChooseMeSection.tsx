@@ -76,7 +76,7 @@ export const WhyChooseMeSection = () => {
     {
       id: 6,
       title: 'Continuous Learning',
-      description: 'Expanding my skills with React and Next.js to bring progressive frontend practices and modular code to every project.',
+      description: 'Leveraging React.js and Next.js to build scalable, component-driven web applications with modern frontend best practices.',
       icon: 'book-open',
       color: 'cyan',
       delay: '0.5s',

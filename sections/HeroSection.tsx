@@ -91,7 +91,7 @@ export const HeroSection = () => {
             </div>
             <div>
               <div className="text-[10px] text-gray-500 font-semibold tracking-wider uppercase">Core Stack</div>
-              <div className="text-sm text-white font-bold font-heading">HTML5 • CSS3 • JS</div>
+              <div className="text-sm text-white font-bold font-heading">React • Next.js • JS</div>
             </div>
           </div>
 
@@ -185,7 +185,7 @@ export const HeroSection = () => {
           <div className="grid grid-cols-3 gap-6 sm:gap-10 border-t border-gray-900 pt-8 w-full max-w-lg">
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold font-heading text-white flex items-center">
-                <Counter target={3} />
+                <Counter target={4} />
               </div>
               <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Personal Projects</div>
             </div>

@@ -15,11 +15,12 @@ export const TerminalMockup = () => {
     college: 'MCC',
     gradYear: 2026
   },
+  stack: ['React.js', 'Next.js', 'TypeScript'],
   focus: ['Responsive UX', 'Clean Code']
 };
 
-// Currently learning...
-console.log(developer.focus);`;
+// Building modern web apps...
+console.log(developer.stack);`;
 
   const handleCopy = async () => {
     try {
@@ -73,6 +74,8 @@ console.log(developer.focus);`;
           <span>11</span>
           <span>12</span>
           <span>13</span>
+          <span>14</span>
+          <span>15</span>
         </div>
         
         {/* Code Lines */}
@@ -86,10 +89,11 @@ console.log(developer.focus);`;
           <p className="pl-8"><span className="text-gray-400">college:</span> <span className="text-emerald-400">{"'MCC'"}</span>,</p>
           <p className="pl-8"><span className="text-gray-400">gradYear:</span> <span className="text-amber-400">2026</span></p>
           <p className="pl-4">{"}"},</p>
+          <p className="pl-4"><span className="text-gray-400">stack:</span> [<span className="text-emerald-400">{"'React.js'"}</span>, <span className="text-emerald-400">{"'Next.js'"}</span>, <span className="text-emerald-400">{"'TypeScript'"}</span>]</p>
           <p className="pl-4"><span className="text-gray-400">focus:</span> [<span className="text-emerald-400">{"'Responsive UX'"}</span>, <span className="text-emerald-400">{"'Clean Code'"}</span>]</p>
           <p>{"}"};</p>
-          <p className="text-gray-500 mt-2">{"// Currently learning..."}</p>
-          <p><span className="text-purple-400">console</span>.log(developer.focus);</p>
+          <p className="text-gray-500 mt-2">{"// Building modern web apps..."}</p>
+          <p><span className="text-purple-400">console</span>.log(developer.stack);</p>
         </div>
       </div>
     </div>
