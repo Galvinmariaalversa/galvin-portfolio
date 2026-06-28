@@ -41,12 +41,12 @@ console.log(developer.stack);`;
           <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
           <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
         </div>
-        <span className="text-xs text-gray-500 font-mono">galvin-j.js</span>
+        <span className="text-xs text-gray-400 font-mono">galvin-j.js</span>
         
         {/* Clipboard Copy Action Button */}
         <button 
           onClick={handleCopy}
-          className="text-gray-500 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer"
+          className="text-gray-400 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer"
           aria-label="Copy Code to Clipboard"
         >
           {copied ? (
@@ -92,7 +92,7 @@ console.log(developer.stack);`;
           <p className="pl-4"><span className="text-gray-400">stack:</span> [<span className="text-emerald-400">{"'React.js'"}</span>, <span className="text-emerald-400">{"'Next.js'"}</span>, <span className="text-emerald-400">{"'TypeScript'"}</span>]</p>
           <p className="pl-4"><span className="text-gray-400">focus:</span> [<span className="text-emerald-400">{"'Responsive UX'"}</span>, <span className="text-emerald-400">{"'Clean Code'"}</span>]</p>
           <p>{"}"};</p>
-          <p className="text-gray-500 mt-2">{"// Building modern web apps..."}</p>
+          <p className="text-gray-400 mt-2">{"// Building modern web apps..."}</p>
           <p><span className="text-purple-400">console</span>.log(developer.stack);</p>
         </div>
       </div>

@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ||
     (process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://galvinj.com")
   ),
+  alternates: {
+    canonical: "/",
+  },
   title: "Galvin J | Freelance Frontend Developer",
   description: "Portfolio of Galvin J, a freelance frontend developer based in Chennai, Tamil Nadu. Building modern, responsive, and high-performance websites for businesses using HTML, Tailwind CSS, and JavaScript.",
   keywords: [
@@ -59,12 +62,29 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} ${outfit.variable} scroll-smooth`}>
       <head>
-        <link rel="preconnect" href="https://buildcraft-landing-page.vercel.app" />
-        <link rel="preconnect" href="https://iron-pulse-fitness-landing-page.vercel.app" />
-        <link rel="preconnect" href="https://tasty-town-food-ordering-q467.vercel.app" />
-        <link rel="dns-prefetch" href="https://buildcraft-landing-page.vercel.app" />
-        <link rel="dns-prefetch" href="https://iron-pulse-fitness-landing-page.vercel.app" />
-        <link rel="dns-prefetch" href="https://tasty-town-food-ordering-q467.vercel.app" />
+        {/* JSON-LD Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Galvin J",
+              "jobTitle": "Freelance Frontend Developer",
+              "url": "https://galvinj.com",
+              "sameAs": [
+                "https://github.com/Galvinmariaalversa",
+                "https://www.linkedin.com/in/galvin-frontend"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Chennai",
+                "addressRegion": "Tamil Nadu",
+                "addressCountry": "IN"
+              }
+            })
+          }}
+        />
       </head>
       <body className="bg-darkBg text-gray-100 overflow-x-hidden antialiased font-sans">
         <CustomCursor />

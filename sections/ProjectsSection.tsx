@@ -31,7 +31,7 @@ export const ProjectsSection = () => {
       categoryName: 'Web Application',
       description: 'A highly interactive project management SaaS application built to handle complex client-side state. It features interactive Kanban boards, Gantt timelines, performance analytics charts, and custom workflow drawers, all responsive and optimized with a premium dark-mode aesthetic.',
       tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'Recharts'],
-      image: '/assets/project management.png',
+      image: '/assets/project_management.webp',
       liveUrl: 'https://project-management-saas-lime.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/project-management-saas-',
       accentColor: 'purple',
@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
       categoryName: 'Landing Page',
       description: 'A visually stunning, high-converting corporate website featuring scroll-driven animations, custom typography, luxury dark-mode aesthetics with gold accents, and a fully validated project estimator/contact form.',
       tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'React Icons'],
-      image: '/assets/corporate business website.png',
+      image: '/assets/corporate_business_website.webp',
       liveUrl: 'https://buildcraft-landing-page-g6u4.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/buildcraft-landing-page',
       accentColor: 'amber',
@@ -60,7 +60,7 @@ export const ProjectsSection = () => {
       categoryName: 'Landing Page',
       description: 'A responsive landing page for a gym featuring static BMI calculators, schedules, and modern dark-mode layouts to demonstrate UI skills.',
       tags: ['HTML5', 'Tailwind CSS', 'Bootstrap', 'JavaScript'],
-      image: '/assets/gyms.png',
+      image: '/assets/gyms.webp',
       liveUrl: 'https://iron-pulse-fitness-landing-page.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/IronPulse-Fitness-landing-page',
       accentColor: 'blue',
@@ -74,7 +74,7 @@ export const ProjectsSection = () => {
       categoryName: 'Web Application',
       description: 'A frontend food ordering interface featuring a dynamic shopping cart simulation, table reservations forms, and a responsive mobile-first layout.',
       tags: ['HTML5', 'Tailwind CSS', 'JavaScript'],
-      image: '/assets/tastytown.png',
+      image: '/assets/tastytown.webp',
       liveUrl: 'https://tasty-town-food-ordering-q467.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/TastyTown-Food-Ordering',
       accentColor: 'pink',
@@ -219,7 +219,7 @@ export const ProjectsSection = () => {
                       rel={project.githubUrl !== '#' ? 'noopener noreferrer' : undefined}
                       className="px-5 py-2.5 rounded-full text-xs font-semibold border border-gray-800 text-gray-400 hover:text-white hover:border-gray-600 bg-white/5 backdrop-blur-sm transition-all inline-flex items-center gap-1.5"
                     >
-                      Source Code <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                      Source Code <svg aria-hidden="true" className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
                     </a>
                   </div>
                 </div>

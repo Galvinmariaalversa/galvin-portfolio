@@ -183,9 +183,10 @@ export const ServicesSection = () => {
                 </div>
                 <a 
                   href={service.link} 
+                  aria-label={`Let's discuss your ${service.title} project`}
                   className={`inline-flex items-center gap-2 text-xs font-semibold transition-colors duration-200 ${hoverTextClass}`}
                 >
-                  Let&apos;s Discuss Your Project <ArrowUpRight className="w-3.5 h-3.5" />
+                  Let&apos;s Discuss Your Project <ArrowUpRight aria-hidden="true" className="w-3.5 h-3.5" />
                 </a>
               </ScrollReveal>
             );
