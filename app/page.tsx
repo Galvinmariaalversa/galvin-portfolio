@@ -1,29 +1,31 @@
 import React from 'react';
-import Preloader from '@/components/Preloader';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/sections/HeroSection';
-import AboutSection from '@/sections/AboutSection';
-import ServicesSection from '@/sections/ServicesSection';
-import SkillsSection from '@/sections/SkillsSection';
-import ProjectsSection from '@/sections/ProjectsSection';
-import WhyChooseMeSection from '@/sections/WhyChooseMeSection';
-import ProcessSection from '@/sections/ProcessSection';
-import CTASection from '@/sections/CTASection';
-import ContactSection from '@/sections/ContactSection';
-import Footer from '@/sections/Footer';
+
+// Dynamically import below-the-fold components to reduce initial JavaScript payload
+const AboutSection = dynamic(() => import('@/sections/AboutSection'));
+const ServicesSection = dynamic(() => import('@/sections/ServicesSection'));
+const SkillsSection = dynamic(() => import('@/sections/SkillsSection'));
+const ProjectsSection = dynamic(() => import('@/sections/ProjectsSection'));
+const WhyChooseMeSection = dynamic(() => import('@/sections/WhyChooseMeSection'));
+const ProcessSection = dynamic(() => import('@/sections/ProcessSection'));
+const CTASection = dynamic(() => import('@/sections/CTASection'));
+const ContactSection = dynamic(() => import('@/sections/ContactSection'));
+const Footer = dynamic(() => import('@/sections/Footer'));
 
 export default function Home() {
   return (
     <>
-      {/* 1. Window Preloader */}
-      <Preloader />
-
-      {/* 2. Header and Navigations */}
+      {/* 1. Header and Navigations */}
       <Navbar />
 
-      {/* 3. Main content sections */}
+      {/* 2. Main content sections */}
       <main>
+        {/* Above the fold (Critical for LCP) */}
         <HeroSection />
+
+        {/* Below the fold (Lazy loaded) */}
         <AboutSection />
         <ServicesSection />
         <SkillsSection />
@@ -34,7 +36,7 @@ export default function Home() {
         <ContactSection />
       </main>
 
-      {/* 4. Footer */}
+      {/* 3. Footer */}
       <Footer />
     </>
   );

@@ -78,6 +78,8 @@ export const HeroSection = () => {
             width={1100}
             height={1100}
             priority
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 750px, 880px"
             className="absolute right-[-40px] xl:right-[-60px] 2xl:right-[-80px] top-1/2 -translate-y-1/2 w-[620px] xl:w-[750px] 2xl:w-[880px] max-w-none h-auto object-contain select-none"
           />
 
