@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/sections/HeroSection';
 
@@ -17,7 +18,10 @@ const Footer = dynamic(() => import('@/sections/Footer'));
 export default function Home() {
   return (
     <>
-      {/* 1. Header and Navigations */}
+      {/* 1. Window Preloader */}
+      <Preloader />
+
+      {/* 2. Header and Navigations */}
       <Navbar />
 
       {/* 2. Main content sections */}
