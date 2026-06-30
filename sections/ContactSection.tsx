@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { User, Mail, Phone, MapPin, Send } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import SuccessModal from '@/components/SuccessModal';
@@ -25,6 +25,7 @@ export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const widgetIdRef = useRef<string | null>(null);
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export const ContactSection = () => {
 
           console.log('[Turnstile Debug] Initializing widget with Site Key:', sitekey);
 
-          (window as any).turnstile.render('#turnstile-container', {
+          widgetIdRef.current = (window as any).turnstile.render('#turnstile-container', {
             sitekey,
             callback: (token: string) => {
               console.log('[Turnstile Debug] Token generated successfully:', token);
@@ -66,7 +67,14 @@ export const ContactSection = () => {
       }
     }, 500);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      if (typeof window !== 'undefined' && (window as any).turnstile && widgetIdRef.current) {
+        try {
+          (window as any).turnstile.remove(widgetIdRef.current);
+        } catch (e) {}
+      }
+    };
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -161,9 +169,9 @@ export const ContactSection = () => {
     } finally {
       setIsSubmitting(false);
       // Reset turnstile widget for next submission
-      if (typeof window !== 'undefined' && (window as any).turnstile) {
+      if (typeof window !== 'undefined' && (window as any).turnstile && widgetIdRef.current) {
         try {
-          (window as any).turnstile.reset('#turnstile-container');
+          (window as any).turnstile.reset(widgetIdRef.current);
         } catch (e) {}
         setTurnstileToken(null);
       }
