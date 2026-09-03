@@ -187,7 +187,7 @@ export const HeroSection = () => {
           <div className="grid grid-cols-3 gap-6 sm:gap-10 border-t border-gray-900 pt-8 w-full max-w-lg">
             <div>
               <div className="text-2xl sm:text-3xl font-extrabold font-heading text-white flex items-center">
-                <Counter target={4} />
+                <Counter target={5} />
               </div>
               <div className="text-xs sm:text-sm text-gray-400 mt-1 font-medium">Personal Projects</div>
             </div>

@@ -26,52 +26,52 @@ export const ProjectsSection = () => {
   const projects: ProjectItem[] = [
     {
       id: 1,
-      title: 'TaskFlow — Enterprise Project Management SaaS Dashboard',
-      category: 'webapp',
-      categoryName: 'Web Application',
-      description: 'A highly interactive project management SaaS application built to handle complex client-side state. It features interactive Kanban boards, Gantt timelines, performance analytics charts, and custom workflow drawers, all responsive and optimized with a premium dark-mode aesthetic.',
-      tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'Recharts'],
-      image: '/assets/project_management.webp',
-      liveUrl: 'https://project-management-saas-lime.vercel.app/',
-      githubUrl: 'https://github.com/Galvinmariaalversa/project-management-saas-',
-      accentColor: 'purple',
+      title: 'GreenCare Clinic — Modern Healthcare Website Concept',
+      category: 'website',
+      categoryName: 'Healthcare Website',
+      description: 'A modern, responsive healthcare clinic website designed to provide patients with a clear and professional online experience. Features doctor profiles, healthcare service sections, category-filtered FAQ, client-side validated contact form, working hours, interactive location directions, appointment booking CTAs, and smooth scroll reveal animations.',
+      tags: ['React', 'Vite', 'Tailwind CSS', 'React Router', 'Framer Motion'],
+      image: '/assets/Green-care-clinic.png.png',
+      liveUrl: 'https://greencare-clinic.vercel.app/',
+      githubUrl: 'https://github.com/Galvinmariaalversa/greencare-clinic',
+      accentColor: 'emerald',
       width: 2040,
       height: 1278,
     },
     {
       id: 2,
-      title: 'BuildCraft Constructions — Premium Corporate Landing Page',
-      category: 'website',
-      categoryName: 'Landing Page',
-      description: 'A visually stunning, high-converting corporate website featuring scroll-driven animations, custom typography, luxury dark-mode aesthetics with gold accents, and a fully validated project estimator/contact form.',
-      tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'React Icons'],
-      image: '/assets/corporate_business_website.webp',
-      liveUrl: 'https://buildcraft-landing-page-g6u4.vercel.app/',
-      githubUrl: 'https://github.com/Galvinmariaalversa/buildcraft-landing-page',
-      accentColor: 'amber',
-      reverse: true,
-      width: 2026,
-      height: 1278,
-    },
-    {
-      id: 3,
       title: 'IronPulse Fitness Platform',
       category: 'website',
-      categoryName: 'Landing Page',
+      categoryName: 'Gym & Fitness Website',
       description: 'A responsive landing page for a gym featuring static BMI calculators, schedules, and modern dark-mode layouts to demonstrate UI skills.',
       tags: ['HTML5', 'Tailwind CSS', 'Bootstrap', 'JavaScript'],
       image: '/assets/gyms.webp',
       liveUrl: 'https://iron-pulse-fitness-landing-page.vercel.app/',
       githubUrl: 'https://github.com/Galvinmariaalversa/IronPulse-Fitness-landing-page',
       accentColor: 'blue',
+      reverse: true,
       width: 2039,
       height: 1050,
+    },
+    {
+      id: 3,
+      title: 'BuildCraft Constructions — Corporate Business Website',
+      category: 'website',
+      categoryName: 'Business Website',
+      description: 'A visually stunning, high-converting corporate website featuring scroll-driven animations, custom typography, luxury dark-mode aesthetics with gold accents, and a fully validated project estimator/contact form.',
+      tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'React Icons'],
+      image: '/assets/corporate_business_website.webp',
+      liveUrl: 'https://buildcraft-landing-page-g6u4.vercel.app/',
+      githubUrl: 'https://github.com/Galvinmariaalversa/buildcraft-landing-page',
+      accentColor: 'amber',
+      width: 2026,
+      height: 1278,
     },
     {
       id: 4,
       title: 'TastyTown Food Ordering Platform',
       category: 'webapp',
-      categoryName: 'Web Application',
+      categoryName: 'Food Ecommerce Website',
       description: 'A frontend food ordering interface featuring a dynamic shopping cart simulation, table reservations forms, and a responsive mobile-first layout.',
       tags: ['HTML5', 'Tailwind CSS', 'JavaScript'],
       image: '/assets/tastytown.webp',
@@ -82,6 +82,20 @@ export const ProjectsSection = () => {
       width: 2047,
       height: 1051,
     },
+    {
+      id: 5,
+      title: 'TaskFlow — Productivity & Enterprise Management SaaS',
+      category: 'webapp',
+      categoryName: 'Productivity Web Application',
+      description: 'A highly interactive project management SaaS application built to handle complex client-side state. It features interactive Kanban boards, Gantt timelines, performance analytics charts, and custom workflow drawers, all responsive and optimized with a premium dark-mode aesthetic.',
+      tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Framer Motion', 'Recharts'],
+      image: '/assets/project_management.webp',
+      liveUrl: 'https://project-management-saas-lime.vercel.app/',
+      githubUrl: 'https://github.com/Galvinmariaalversa/project-management-saas-',
+      accentColor: 'purple',
+      width: 2040,
+      height: 1278,
+    },
   ];
 
   const filteredProjects = projects.filter(
@@ -89,6 +103,7 @@ export const ProjectsSection = () => {
   );
 
   const hoverColorMap: Record<string, string> = {
+    emerald: 'hover:bg-emerald-500 hover:text-white',
     purple: 'hover:bg-purple-500 hover:text-white',
     blue: 'hover:bg-blue-500 hover:text-white',
     pink: 'hover:bg-pink-500 hover:text-white',
@@ -96,6 +111,7 @@ export const ProjectsSection = () => {
   };
 
   const glowColorMap: Record<string, string> = {
+    emerald: 'bg-emerald-500/10',
     purple: 'bg-purple-500/10',
     blue: 'bg-blue-500/10',
     pink: 'bg-pink-500/10',
@@ -103,6 +119,7 @@ export const ProjectsSection = () => {
   };
 
   const textColorMap: Record<string, string> = {
+    emerald: 'text-emerald-400',
     purple: 'text-purple-400',
     blue: 'text-blue-400',
     pink: 'text-pink-400',
@@ -170,6 +187,7 @@ export const ProjectsSection = () => {
                     alt={`${project.title} Mockup`}
                     width={project.width}
                     height={project.height}
+                    priority={project.id === 1}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   />
