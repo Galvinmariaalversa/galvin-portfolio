@@ -35,49 +35,49 @@ export const WhyChooseMeSection = () => {
   const cards: ValueCard[] = [
     {
       id: 1,
-      title: 'Responsive Design',
-      description: 'Every project is built with a responsive layout that scales fluidly across mobile screens, tablets, and large desktop monitors.',
+      title: 'Mobile-Friendly Experience',
+      description: 'Websites designed to provide a smooth and easy experience across mobile, tablet, and desktop devices.',
       icon: 'smartphone',
       color: 'purple',
       delay: '0s',
     },
     {
       id: 2,
-      title: 'Mobile-First Development',
-      description: 'Prioritizing mobile layouts during development ensures a clean, fast-loading, and interactive experience on smartphones.',
-      icon: 'layers',
+      title: 'Modern & Professional Design',
+      description: 'Clean and professional designs that represent your business and help build trust with potential customers.',
+      icon: 'layout',
       color: 'blue',
       delay: '0.1s',
     },
     {
       id: 3,
-      title: 'Clean & Maintainable Code',
-      description: 'Writing semantic, structured HTML and clean Tailwind classes to make the codebase easy to read, update, and maintain.',
-      icon: 'code',
+      title: 'Fast & User-Friendly',
+      description: 'Websites built with performance and usability in mind to provide visitors with a smooth browsing experience.',
+      icon: 'zap',
       color: 'pink',
       delay: '0.2s',
     },
     {
       id: 4,
-      title: 'Fast Loading Websites',
-      description: 'Optimizing assets and code structures to achieve rapid page loading speeds and smooth visual rendering.',
-      icon: 'zap',
+      title: 'Business-Focused Approach',
+      description: 'Every website is designed to clearly showcase your services and encourage visitors to take the next step.',
+      icon: 'layers',
       color: 'emerald',
       delay: '0.3s',
     },
     {
       id: 5,
-      title: 'Modern UI Design',
-      description: 'Designing interfaces with sleek dark themes, consistent grids, balanced typography, and clean purple-blue branding.',
-      icon: 'layout',
+      title: 'Clear Communication',
+      description: 'A simple and transparent process from understanding your requirements to reviewing and delivering your website.',
+      icon: 'book-open',
       color: 'amber',
       delay: '0.4s',
     },
     {
       id: 6,
-      title: 'Continuous Learning',
-      description: 'Leveraging React.js and Next.js to build scalable, component-driven web applications with modern frontend best practices.',
-      icon: 'book-open',
+      title: 'Quality Development',
+      description: 'Carefully built websites with attention to detail, consistency, and a reliable user experience.',
+      icon: 'code',
       color: 'cyan',
       delay: '0.5s',
     },
@@ -94,7 +94,7 @@ export const WhyChooseMeSection = () => {
             Why Work With Me
           </h2>
           <p className="text-gray-400 text-sm sm:text-base">
-            Focusing on delivering functional, well-structured, and fast-loading web interfaces.
+            Focused on creating professional, user-friendly websites that help businesses build a strong online presence.
           </p>
         </ScrollReveal>
 

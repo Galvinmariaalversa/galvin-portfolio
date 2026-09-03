@@ -150,21 +150,21 @@ export const HeroSection = () => {
         <ScrollReveal className="lg:col-span-7 flex flex-col items-start text-left" variant="fade">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for Freelance Work
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Frontend Developer for Growing Businesses
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white leading-[1.15] mb-6 tracking-tight">
-            Frontend Developer Building{' '}
+            I Build Modern Websites for{' '}
             <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-blue-400 text-transparent bg-clip-text">
-              Responsive, User-Friendly
+              Clinics & Fitness
             </span>{' '}
-            Websites
+            Businesses
           </h1>
 
           {/* Subheadline */}
           <p className="text-gray-400 text-base sm:text-lg mb-8 max-w-xl leading-relaxed">
-            I build clean, modern, and fully responsive websites that focus on usability, clean code, and seamless layout across all devices.
+            I design and develop fast, responsive, and professional websites that help clinics and fitness businesses build trust, showcase their services, and generate more customer enquiries.
           </p>
 
           {/* CTA Buttons */}
@@ -179,7 +179,7 @@ export const HeroSection = () => {
               href="#contact"
               className="px-7 py-3.5 rounded-full text-sm font-semibold border border-gray-800 text-gray-300 hover:text-white hover:border-gray-600 bg-white/5 backdrop-blur-sm transition-all duration-300 inline-flex items-center gap-2"
             >
-              Contact Me <Mail className="w-4 h-4" />
+              Let&apos;s Work Together <Mail className="w-4 h-4" />
             </a>
           </div>
 
